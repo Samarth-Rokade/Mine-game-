@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #102230;
+    color: beige;
+    overflow-x: hidden;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+input,
+select {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding-left: 0.4rem;
+    color: beige;
+    background-color: #475d6e;
+}
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 0.1rem;
+}
+
+input::placeholder {
+    color: whitesmoke;
+    padding: 0.3rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-family: "Pacifico", cursive;
+    background-color: #102230;
+    text-align: center;
+    box-shadow: 0px 3px 5px #050b10;
+}
+
+.main {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gameControlContainer {
+    height: 100%;
+    width: 40%;
+    border-radius: 0.8rem;
+    background-color: #2f4553;
+}
+
+.gameControlContainer form {
+    height: 100%;
+    width: 100%;
+
+}
+
+.gameBoxContainer {
+    height: 100%;
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameContainer {
+    width: 80vmin;
+    aspect-ratio: 1/1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+}
+
+.tile {
+    height: 100%;
+    width: 100%;
+
+    transition: all 0.1s ease-in-out;
+    background-color: #2f4553;
+    border-radius: 0.2rem;
+}
+
+.tile:hover {
+    background-color: #3e5c6e;
+    transform: scale(1.03);
+    border: 2px solid #628398;
+}
+
+.controlContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.controlContainer>* {
+    width: 100%;
+}
+
+#BalanceInput,
+.balanceAmount,
+.inputContainer {
+    width: 100%;
+    border: none;
+    border-radius: 0.1rem;
+    outline: none;
+}
+
+.balanceAmount {
+    padding: 1rem;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.bidContainer,
+.mineContainer {
+    width: 45%;
+}
+
+#BalanceInput,
+#bidInput,
+#mineInput {
+    height: 3vw;
+    width: 100%;
+}
+
+.btn-cnt {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.cashout,
+.startBtn {
+    width: 100%;
+    color: black;
+    background: greenyellow;
+    height: 3vw;
+    padding: 0;
+    font-size: 1.5vw;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.cashout {
+    display: none;
+}
+
+.result-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: auto;
+    display: flex;
+    place-content: center;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.result {
+    display: none;
+    place-content: center;
+    border-radius: 1rem;
+    border: 3.5px solid greenyellow;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    text-align: center;
+    background-color: #102230;
+}
+
+.multiplier {
+    font-size: 4vw;
+    font-weight: 700;
+    color: greenyellow;
+}
+
+.profit {
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.total {
+    font-size: 2vw;
+    font-weight: 700;
+    color: rgb(187, 246, 98);
+}
+
+.lost {
+    display: none;
+    width: 100%;
+    text-align: center;
+    border: 3.5px solid red;
+    padding: 1vw;
+    border-radius: 1rem;
+    color: rgb(255, 21, 21);
+    font-size: 2rem;
+    background-color: #102230;
+}
+
+@media (min-width:800px) and (max-width:950px) {
+    .container {
+        gap: 1rem;
+    }
+
+    .controlContainer {
+        padding: 1.5rem;
+        justify-content: space-around;
+    }
+
+    .gameContainer {
+        width: 100%;
+        aspect-ratio: 1;
+        gap: 1vw;
+    }
+
+    .balanceAmount,
+    .inputContainer,
+    .btn-cnt,
+    .result-container {
+        padding: 0.5rem
+    }
+
+    .cashout,
+    .startBtn {
+        font-size: 2vw;
+        height: 3.5vw;
+    }
+
+    #BalanceInput,
+    #bidInput,
+    #mineInput {
+        height: 4vw;
+    }
+
+    .result-container {
+        height: auto;
+        flex-grow: 1;
+        padding-block: 1rem;
+
+    }
+
+
+    .result {
+        margin-bottom: auto;
+        gap: 0.3rem;
+        background-color: #102230;
+        height: auto;
+        margin-bottom: auto;
+    }
+
+    .lost {
+        margin-bottom: auto;
+        font-size: 3vw;
+        background-color: #102230;
+        height: auto;
+    }
+}
+
+@media (min-width:0px) and (max-width:800px) {
+    header {
+        font-size: 3vw;
+        height: 10vw;
+        box-shadow: 0px 2px 5px #050b10;
+    }
+
+    .main {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        padding: 5vw;
+        gap: 7vw
+    }
+
+    .controlContainer {
+        padding: 1.3vw;
+        gap: 1vw;
+        font-size: 3.5vw;
+    }
+
+    .gameControlContainer {
+        width: 100%;
+        border-radius: 3vw;
+    }
+
+    .balanceAmount,
+    .inputContainer,
+    .btn-cnt,
+    .result-container {
+        padding: 2vw;
+        gap: 3vw;
+    }
+
+    input {
+        padding: 2vw 1vw;
+        height: auto;
+    }
+
+    #BalanceInput,
+    #bidInput,
+    #mineInput {
+        font-size: 3.5vw;
+        height: 4.5vw;
+    }
+
+    .cashout,
+    .startBtn {
+        font-size: 3.5vw;
+        height: 6vw;
+        border-radius: 0.8vw;
+    }
+
+    .gameContainer {
+        width: 100%;
+        gap: 1.7vw;
+    }
+
+    .gameBoxContainer {
+        padding: 0;
+        width: 100%;
+        gap: 0.5rem;
+        height: auto;
+        align-items: start;
+    }
+
+    .tile {
+        border-radius: 0.8vw;
+    }
+
+    .multiplier {
+        font-size: 10vw;
+    }
+
+    .profit {
+        font-size: 3vw;
+    }
+
+    .total {
+        font-size: 4vw;
+    }
+
+    .result-container {
+        font-size: 10vw;
+    }
+
+    .result {
+        border-radius: 3vw;
+        padding: 2vw 0;
+        gap: 2vw;
+    }
+
+    .lost {
+        padding: 4vw 2vw;
+        border-radius: 3vw;
+        font-size: 9vw;
+        font-weight: 900;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Mine Game</h1>
+    </nav>
+  </header>
+  <div class="main">
+    <div class="container">
+      <div class="gameControlContainer">
+        <form class="controlForm">
+          <div class="controlContainer">
+            <div class="balanceAmount">
+              <p class="BalanceText">Balance</p>
+              <input type="number" value="999" id="BalanceInput" disabled />
+            </div>
+
+            <div class="inputContainer">
+              <div class="bidContainer">
+                <p class="BidText">Coins</p>
+                <input type="number" id="bidInput" value="10" min="1" required />
+              </div>
+
+              <div class="mineContainer">
+                <p class="mineText">Mine</p>
+                <select name="" id="mineInput" default>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="btn-cnt">
+              <input type="submit" value="Start" class="startBtn" />
+              <input type="button" value="Cashout" class="cashout">
+            </div>
+            <div class="result-container">
+              <div class="result">
+                <div class="multiplier"><span class="actual-multiplier">0.99</span>x</div>
+                <div class="profit">Profit : <span class="total">0</span></div>
+              </div>
+              <div class="lost">
+                <h3>You Lost!!!</h3>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="gameBoxContainer">
+        <div class="gameContainer">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
