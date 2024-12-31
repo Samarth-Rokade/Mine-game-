@@ -1,6 +1,6 @@
-# Gambling Game
+# Minesweeper Challenge
 
-This repository showcases a Gambling game where players select the number of mines to be placed randomly in a 5x5 grid of 25 tiles. Players select tiles without mines, and their placed amount is multiplied based on the number of correct selections.
+This repository showcases a Minesweeper Challenge game where players select the number of mines to be placed randomly in a 5x5 grid of 25 tiles. Players select tiles without mines, and their placed amount is multiplied based on the number of correct selections.
 
 ## Game Rules
 
@@ -14,8 +14,8 @@ This repository showcases a Gambling game where players select the number of min
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/gambling-game.git
-    cd gambling-game
+    git clone https://github.com/yourusername/minesweeper-challenge.git
+    cd minesweeper-challenge
     ```
 
 2. Install dependencies:
